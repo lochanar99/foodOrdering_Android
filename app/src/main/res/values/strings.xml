@@ -21,4 +21,7 @@
     <string name="f1">Register</string>
     <string name="l1">Login</string>
     <string name="l2">Succesfully Register</string>
+    <string name="h1">Reset Password</string>
+    <string name="Email">Email</string>
+    <string name="n1">Next</string>
 </resources>
