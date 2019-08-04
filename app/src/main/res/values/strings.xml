@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Order_Food</string>
+    <string name="cusname">NAME</string>
+    <string name="cusAddress">ADDRESS</string>
+    <string name="i1">ITEM</string>
+    <string name="p1">PHONE NO.</string>
+    <string name="t1">TOTAL</string>
 </resources>
