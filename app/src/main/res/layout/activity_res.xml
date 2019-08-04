@@ -4,39 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/image3"
     tools:context=".Res">
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="238dp"
-        android:layout_height="140dp"
+        android:layout_width="305dp"
+        android:layout_height="158dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/q1"
+        android:textColor="#CE1913"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.788"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.581" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="#00BCD4"
         android:text="@string/Log"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintVertical_bias="0.85" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="201dp"
+        android:layout_height="195dp"
+        app:srcCompat="@drawable/image6"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="60dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
