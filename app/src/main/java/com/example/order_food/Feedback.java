@@ -40,6 +40,7 @@ public class Feedback extends AppCompatActivity {
 };
 
 }*/
-    };}
+    }
+}
 
 
