@@ -24,4 +24,10 @@
     <string name="h1">Reset Password</string>
     <string name="Email">Email</string>
     <string name="n1">Next</string>
+    <string name="w2">Reset Password_</string>
+    <string name="j1">REgister</string>
+    <string name="a1">Answer</string>
+    <string name="x1">Submit</string>
+    <string name="q1">Reset Successfully</string>
+    <string name="Log">Login</string>
 </resources>
