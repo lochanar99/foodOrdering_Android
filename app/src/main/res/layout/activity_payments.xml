@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pastel-color-fruit-pattern-blue-seamless-vector-print-web-subtle-light-food-background-65060023"
     tools:context=".Payments">
 
 
