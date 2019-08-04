@@ -5,4 +5,6 @@
     <string name="i1">ITEM</string>
     <string name="p1">PHONE NO.</string>
     <string name="t1">TOTAL</string>
+    <string name="w1">Welcome</string>
+    <string name="o1">ORDER</string>
 </resources>
