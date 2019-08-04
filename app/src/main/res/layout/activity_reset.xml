@@ -16,15 +16,16 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="400dp"
         android:text="@string/h1"
+        android:textAlignment="center"
         android:textColor="#040A1F"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.174" />
 
     <Button
         android:id="@+id/button"
