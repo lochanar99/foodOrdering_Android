@@ -8,22 +8,22 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class Payments extends AppCompatActivity {
+public class Payments extends AppCompatActivity  {
 
-    private ImageButton imageButton;
+    private ImageButton imageButtonx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payments);
 
-        imageButton =(ImageButton) findViewById(R.id.b1);
+        imageButtonx =(ImageButton) findViewById(R.id.b1);
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        imageButtonx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getApplicationContext(),"Thankyou for Odering!",Toast.LENGTH_LONG);
+
                 redirectFeedback();
             }
         });
