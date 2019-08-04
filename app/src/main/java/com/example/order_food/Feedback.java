@@ -15,15 +15,15 @@ public class Feedback extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
-        final EditText edit1 = (EditText)findViewById(R.id.editText);
-        final EditText edit2 = (EditText)findViewById(R.id.editText2);
-        Button btn=(Button) findViewById(R.id.button);
-        btn.setOnClickListener (new View.OnClickListener() {
+        //final EditText edit1 = (EditText)findViewById(R.id.editText);
+        //final EditText edit2 = (EditText)findViewById(R.id.editText2);
+        //Button btn=(Button) findViewById(R.id.button);
+        //btn.setOnClickListener (new View.OnClickListener() {
 
 
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Intent.ACTION_SEND);
+        //@Override
+        //public void onClick(View view) {
+               /* Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/html");
                 i.putExtra(Intent.EXTRA_EMAIL,new String(original,"xyz@gmail.com"));
                 i.putExtra(Intent.EXTRA_SUBJECT,value,"Feedback From App");
@@ -39,6 +39,7 @@ public class Feedback extends AppCompatActivity {
         }}
 };
 
-}
+}*/
+    };}
 
 
