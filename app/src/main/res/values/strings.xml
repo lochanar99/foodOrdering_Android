@@ -13,4 +13,12 @@
     <string name="Login1">LOGIN</string>
     <string name="CantRemember">Can\'t Remember</string>
     <string name="d1">Don\'t Have An Account</string>
+    <string name="r1">Register</string>
+    <string name="r2">FirstName</string>
+    <string name="r3">LastName</string>
+    <string name="r4">Email</string>
+    <string name="r5">Contact No</string>
+    <string name="f1">Register</string>
+    <string name="l1">Login</string>
+    <string name="l2">Succesfully Register</string>
 </resources>
