@@ -23,7 +23,7 @@ public class Payments extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getApplicationContext(),"Thankyou for Odering!",Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(),"Thankyou for Odering!",Toast.LENGTH_LONG);
                 redirectFeedback();
             }
         });
