@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class Payments extends AppCompatActivity  {
 
@@ -17,7 +16,7 @@ public class Payments extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payments);
 
-        imageButtonx =findViewById(R.id.b1);
+        imageButtonx =findViewById(R.id.bb1);
 
         imageButtonx.setOnClickListener(new View.OnClickListener() {
             @Override

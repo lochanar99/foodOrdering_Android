@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/iamge2"
-        tools:context=".Payments">
+        tools:context=".Payments"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-41dp">
 
 
         <TextView
@@ -205,7 +207,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
         <ImageButton
-            android:id="@+id/b1"
+            android:id="@+id/bb1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -213,6 +215,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:background="#E91E63"
+            android:contentDescription="@android:string/ok"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.832"
@@ -234,7 +237,7 @@
             android:textColor="#E91E63"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/b1"
+            app:layout_constraintEnd_toStartOf="@+id/bb1"
             app:layout_constraintHorizontal_bias="0.144"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
