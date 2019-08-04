@@ -7,4 +7,10 @@
     <string name="t1">TOTAL</string>
     <string name="w1">Welcome</string>
     <string name="o1">ORDER</string>
+    <string name="Login">Login</string>
+    <string name="UserName">UserNAme</string>
+    <string name="Password">Password</string>
+    <string name="Login1">LOGIN</string>
+    <string name="CantRemember">Can\'t Remember</string>
+    <string name="d1">Don\'t Have An Account</string>
 </resources>
