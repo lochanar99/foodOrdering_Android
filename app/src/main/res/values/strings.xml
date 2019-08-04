@@ -13,4 +13,5 @@
     <string name="Login1">LOGIN</string>
     <string name="CantRemember">Can\'t Remember</string>
     <string name="d1">Don\'t Have An Account</string>
+    <string name="back">BACK</string>
 </resources>
