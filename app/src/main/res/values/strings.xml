@@ -42,4 +42,8 @@
     <string name="s1">Pastry Rs50/=</string>
     <string name="s2">Chicken Roll Rs45/=</string>
     <string name="s3">Sausage bun Rs40/=</string>
+    <string name="message_1">FeedBack</string>
+    <string name="button">Send Feedback</string>
+    <string name="message_2">Rate our app</string>
+    <string name="message_3">Username</string>
 </resources>
