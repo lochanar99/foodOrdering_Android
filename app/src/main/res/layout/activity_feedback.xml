@@ -117,7 +117,7 @@
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="8dp"
         android:background="#0077AD3E"
-        android:contentDescription="555"
+        android:contentDescription="@string/image_10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

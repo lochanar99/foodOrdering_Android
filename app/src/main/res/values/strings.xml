@@ -46,4 +46,5 @@
     <string name="button">Send Feedback</string>
     <string name="message_2">Rate our app</string>
     <string name="message_3">Username</string>
+    <string name="image_10">feedback</string>
 </resources>
