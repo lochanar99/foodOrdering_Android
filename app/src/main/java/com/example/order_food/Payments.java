@@ -44,9 +44,9 @@ public class Payments extends AppCompatActivity  {
     public void redirectFeedback(){
         Intent intent = new Intent(this, Feedback.class);
 
-        Toast.makeText(getApplicationContext(),"THANKYOU FOR ORDERING",Toast.LENGTH_LONG);
-        startActivity(intent);
 
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(),"THANKYOU FOR ORDERING",Toast.LENGTH_LONG);
     }
 
     public void redirectOrderStatus(){
