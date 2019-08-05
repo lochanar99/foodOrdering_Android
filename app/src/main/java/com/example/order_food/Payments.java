@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Payments extends AppCompatActivity  {
 
     private ImageButton imageButtonx;
+    private Button bbb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +28,29 @@ public class Payments extends AppCompatActivity  {
                 redirectFeedback();
             }
         });
+
+        bbb =findViewById(R.id.b3);
+
+        bbb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                redirectOrderStatus();
+            }
+        });
     }
 
     public void redirectFeedback(){
         Intent intent = new Intent(this, Feedback.class);
 
         startActivity(intent);
+    }
+
+    public void redirectOrderStatus(){
+
+        Intent intent= new Intent(this,OrderStatus.class);
+
+        startActivity(intent);
+
     }
 }
