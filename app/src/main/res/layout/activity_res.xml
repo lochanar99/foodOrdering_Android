@@ -52,5 +52,5 @@
         android:layout_height="162dp"
         app:srcCompat="@drawable/image6"
         tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="188dp" />
+        tools:layout_editor_absoluteY="175dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
