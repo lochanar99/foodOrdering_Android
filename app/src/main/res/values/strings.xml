@@ -47,5 +47,8 @@
     <string name="k1">Egg Koththu Rs190/=</string>
     <string name="k2">Cheese Koththu Rs350/=</string>
     <string name="k3">Chicken Koththu Rs250/=</string>
+    <string name="s1">Pastry Rs50/=</string>
+    <string name="s2">Chicken Roll Rs45/=</string>
+    <string name="s3">Sausage Bun Rs40/=</string>
 
 </resources>
