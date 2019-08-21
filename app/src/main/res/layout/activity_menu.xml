@@ -35,6 +35,14 @@
             android:text="@string/noodles2" />
 
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/rice"
+            android:layout_marginTop="20dp"/>
+
+
     </LinearLayout>
 
 </ScrollView>
