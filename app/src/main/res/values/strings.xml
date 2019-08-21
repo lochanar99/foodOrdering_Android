@@ -29,18 +29,7 @@
     <string name="x1">Submit</string>
     <string name="q1">Reset Successfully</string>
     <string name="Log">Login</string>
-    <string name="noodle1">Chicken Noodles Rs200/=</string>
-    <string name="noodle2">Vegetable Noodles Rs150/=</string>
-    <string name="rice1">Vegetable Rice Rs180/=</string>
-    <string name="rice2">Chicken Rice Rs200/=</string>
-    <string name="rice3">Fried Rice Rs250/=</string>
-    <string name="rice4">Nasi Goreng Rs350/=</string>
-    <string name="k1">Egg Koththu Rs190/=</string>
-    <string name="k2">Chicken Koththu Rs250/=</string>
-    <string name="k3">Cheese Koththu Rs350/=</string>
-    <string name="s1">Pastry Rs50/=</string>
-    <string name="s2">Chicken Roll Rs45/=</string>
-    <string name="s3">Sausage bun Rs40/=</string>
+
     <string name="message_1">FeedBack</string>
     <string name="button">Send Feedback</string>
     <string name="message_2">Rate our app</string>
@@ -49,5 +38,7 @@
     <string name="cOrder">ORDER STATUS</string>
     <string name="items">ITEMS</string>
     <string name="app_name">Order Food</string>
+    <string name="noodles1">Chicken Noodles Rs200/=</string>
+    <string name="noodles2">Vegetable Noodles Rs150/=</string>
 
 </resources>
