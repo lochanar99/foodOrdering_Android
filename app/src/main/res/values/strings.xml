@@ -44,5 +44,8 @@
     <string name="rice2">Chicken Rice Rs200/=</string>
     <string name="rice3">Fried Rice Rs250/=</string>
     <string name="rice4">Nasi Goreng Rs350/=</string>
+    <string name="k1">Egg Koththu Rs190/=</string>
+    <string name="k2">Cheese Koththu Rs350/=</string>
+    <string name="k3">Chicken Koththu Rs250/=</string>
 
 </resources>
