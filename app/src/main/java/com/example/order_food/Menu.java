@@ -19,7 +19,7 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
 
-        b1 = (Button)findViewById(R.id.button2);
+        b1 = (Button)findViewById(R.id.button1);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
