@@ -50,5 +50,6 @@
     <string name="s1">Pastry Rs50/=</string>
     <string name="s2">Chicken Roll Rs45/=</string>
     <string name="s3">Sausage Bun Rs40/=</string>
+    <string name="b1">Update/Delete</string>
 
 </resources>
