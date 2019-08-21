@@ -40,5 +40,9 @@
     <string name="app_name">Order Food</string>
     <string name="noodles1">Chicken Noodles Rs200/=</string>
     <string name="noodles2">Vegetable Noodles Rs150/=</string>
+    <string name="rice1">Vegetable Rice Rs180/=</string>
+    <string name="rice2">Chicken Rice Rs200/=</string>
+    <string name="rice3">Fried Rice Rs250/=</string>
+    <string name="rice4">Nasi Goreng Rs350/=</string>
 
 </resources>
