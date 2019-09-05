@@ -49,6 +49,5 @@
     <string name="cOrder">ORDER STATUS</string>
     <string name="items">ITEMS</string>
     <string name="app_name">Order Food</string>
-    <string name="Question">Question</string>
 
 </resources>
