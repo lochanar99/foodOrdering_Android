@@ -49,5 +49,10 @@
     <string name="cOrder">ORDER STATUS</string>
     <string name="items">ITEMS</string>
     <string name="app_name">Order Food</string>
+    <string name="Add">ADD</string>
+    <string name="VehicaleNo">VehicaleNo</string>
+    <string name="Lcnno">LiceneNo</string>
+    <string name="empid">EmpID</string>
+    <string name="title_activity_delivery_management">deliveryManagement</string>
 
 </resources>
