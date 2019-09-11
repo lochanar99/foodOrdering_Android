@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_background1"
-            android:text="@string/b2" />
+            android:text="@string/sub" />
 
         <Button
             android:id="@+id/button2"
@@ -137,7 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_background2"
-            android:text="@string/b1" />
+            android:text="@string/vc" />
 
 
 
