@@ -2,6 +2,7 @@ package com.example.order_food;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,15 +10,21 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+
+import com.example.order_food.Database.DBHelper;
+
 public class Payments extends AppCompatActivity  {
 
     private ImageButton imageButtonx;
     private Button bbb;
+    DBHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payments);
+
+        db = new DBHelper(this);
 
         imageButtonx =findViewById(R.id.bb1);
 

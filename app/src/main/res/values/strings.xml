@@ -62,5 +62,8 @@
     <string name="sshortbun">Sausage Bun RS40/=</string>
     <string name="pmethod">PAYMENT METHOD</string>
     <string name="oId">Order ID</string>
+    <string name="paymentHint1">FULL NAME</string>
+    <string name="paymentMobile">MOBILE</string>
+    <string name="paymentCC">CASH/CARD</string>
 
 </resources>

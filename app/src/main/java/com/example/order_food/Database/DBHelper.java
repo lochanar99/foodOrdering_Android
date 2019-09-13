@@ -17,8 +17,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
+        SQLiteDatabase db = this.getWritableDatabase();
 
 
     }
