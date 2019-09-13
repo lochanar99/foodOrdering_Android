@@ -52,5 +52,10 @@
     <string name="cnoodles1">Chicken Noodles RS200/=</string>
     <string name="txtqty">Quantity</string>
     <string name="hintqty">Enter quantity</string>
+    <string name="cnoodles2">Vegetable Noodles RS150/=</string>
+    <string name="confirmbutton">Add to Cart</string>
+    <string name="crice1">Chicken Rice RS200/=</string>
+    <string name="nrice">Nasi Goreng RS350/=</string>
+    <string name="ckoththu">Chicken Koththu RS250/=</string>
 
 </resources>
