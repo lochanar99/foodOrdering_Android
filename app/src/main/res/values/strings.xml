@@ -1,7 +1,7 @@
 <resources>
     <string name="cusname">NAME</string>
     <string name="cusAddress">ADDRESS</string>
-    <string name="i1">ITEM</string>
+    <string name="i1"> NO. OF ITEMS</string>
     <string name="p1">PHONE NO.</string>
     <string name="t1">TOTAL</string>
     <string name="w1">Welcome</string>
@@ -35,7 +35,7 @@
     <string name="message_2">Rate our app</string>
     <string name="message_3">Username</string>
     <string name="image_10">image4.jpg</string>
-    <string name="cOrder">ORDER STATUS</string>
+    <string name="cOrder">VIEW CART</string>
     <string name="items">ITEMS</string>
     <string name="app_name">Order Food</string>
     <string name="Add">ADD</string>
@@ -60,5 +60,7 @@
     <string name="chkoththu">Cheese Koththu RS350/=</string>
     <string name="cshorteat">Chicken Roll RS45/=</string>
     <string name="sshortbun">Sausage Bun RS40/=</string>
+    <string name="pmethod">PAYMENT METHOD</string>
+    <string name="oId">Order ID</string>
 
 </resources>
