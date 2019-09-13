@@ -57,5 +57,7 @@
     <string name="crice1">Chicken Rice RS200/=</string>
     <string name="nrice">Nasi Goreng RS350/=</string>
     <string name="ckoththu">Chicken Koththu RS250/=</string>
+    <string name="chkoththu">Cheese Koththu RS350/=</string>
+    <string name="cshorteat">Chicken Roll RS45/=</string>
 
 </resources>
