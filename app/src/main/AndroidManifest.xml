@@ -9,14 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddDelivery_s"></activity>
         <activity android:name=".ViewDeliveryEmp" />
         <activity android:name=".details" />
         <activity android:name=".OrderStatus" />
         <activity android:name=".Menu" />
         <activity android:name=".Res" />
-        <activity android:name=".Reset" />
-        <activity android:name=".ResetPassword" />
         <activity android:name=".SuccessfullyLogin" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />

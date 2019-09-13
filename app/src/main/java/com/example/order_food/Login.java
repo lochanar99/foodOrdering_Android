@@ -30,13 +30,13 @@ public class Login extends AppCompatActivity {
 
         button9 =findViewById(R.id.button9);
 
-        button9.setOnClickListener(new View.OnClickListener() {
+        /*button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Login.this,ResetPassword.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         button =findViewById(R.id.button);
 

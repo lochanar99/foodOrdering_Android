@@ -26,13 +26,13 @@
             android:id="@+id/radioButton5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/noodles1" />
+            android:text="@string/noodle1" />
 
         <RadioButton
             android:id="@+id/radioButton6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/noodles2" />
+            android:text="@string/noodle2" />
 
 
         <ImageView
