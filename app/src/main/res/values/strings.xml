@@ -49,5 +49,8 @@
     <string name="Email">Email</string>
     <string name="btn1menu">Submit</string>
     <string name="btn2menu">View Cart</string>
+    <string name="cnoodles1">Chicken Noodles RS200/=</string>
+    <string name="txtqty">Quantity</string>
+    <string name="hintqty">Enter quantity</string>
 
 </resources>

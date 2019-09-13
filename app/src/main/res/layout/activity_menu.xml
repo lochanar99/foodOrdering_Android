@@ -36,15 +36,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="TextView"
+                android:text="@string/cnoodles1"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/editText14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -54,7 +53,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="TextView"
+                android:text="@string/txtqty"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/button3"
@@ -69,15 +68,15 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="28dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView15"
-                app:layout_constraintTop_toBottomOf="@+id/textView14"
                 android:counterEnable="true"
                 android:counterMaxLength="3"
-                android:errorEnabled="true"/>
+                android:ems="10"
+                android:errorEnabled="true"
+                android:hint="@string/hintqty"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
             <Button
                 android:id="@+id/button3"
