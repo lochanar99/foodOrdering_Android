@@ -56,5 +56,6 @@
     <string name="title_activity_delivery_management">deliveryManagement</string>
     <string name="sub">Submit</string>
     <string name="vc">View Cart</string>
+    <string name="start">ORDER FOOD</string>
 
 </resources>
