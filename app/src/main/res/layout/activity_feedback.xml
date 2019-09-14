@@ -16,8 +16,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:hint="@string/UserName"
         android:inputType="textPersonName"
-        android:text="@string/message_3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.388"
@@ -33,16 +33,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/FeedBack"
         android:inputType="textPersonName"
-        android:text="@string/message_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.235" />
 
     <Button
         android:id="@+id/bb1"
@@ -69,7 +69,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:text="Feedback"
+        android:text="@string/FeedBack"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,6 +98,7 @@
         android:layout_height="250dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:contentDescription="@string/FeedBack"
         android:src="@drawable/image4"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
@@ -124,7 +125,7 @@
         app:layout_constraintVertical_bias="0.908" />
 
     <Button
-        android:id="@+id/badmin"
+        android:id="@+id/badmine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnAdmin"

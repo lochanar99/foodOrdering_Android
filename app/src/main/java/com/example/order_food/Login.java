@@ -10,20 +10,30 @@ import android.widget.Button;
 public class Login extends AppCompatActivity {
 
 
-   private Button button2;
-   private Button button9;
-   private Button button;
+    Button button2;
+    Button button9;
+    Button button;
+    Button bAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         button2 =findViewById(R.id.button2);
+        bAdmin = findViewById(R.id.button14);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Login.this,Menu.class);
+                startActivity(intent);
+            }
+        });
+
+        bAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this,addResturant.class);
                 startActivity(intent);
             }
         });

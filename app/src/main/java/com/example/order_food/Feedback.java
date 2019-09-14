@@ -6,12 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class Feedback extends AppCompatActivity {
 
-    private Button badmin;
+    Button badmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +17,7 @@ public class Feedback extends AppCompatActivity {
         setContentView(R.layout.activity_feedback);
 
 
-        badmin =findViewById(R.id.badmin);
+        badmin =findViewById(R.id.badmine);
 
         badmin.setOnClickListener(new View.OnClickListener() {
             @Override

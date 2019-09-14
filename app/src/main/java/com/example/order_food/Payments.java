@@ -18,11 +18,11 @@ import com.example.order_food.Database.DBHelper;
 
 public class Payments extends AppCompatActivity  {
 
-    ImageButton imageButtonx;
+
 
     DBHelper db;
     EditText eName,eAddress,eNoOfItem,ePhone,eTotal,ePaymentM;
-    Button bSubmit,bSummary;
+    Button bSubmit,bSummary,bfeedback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +42,9 @@ public class Payments extends AppCompatActivity  {
 
         db = new DBHelper(this);
 
-        imageButtonx =findViewById(R.id.bb1);
+        bfeedback =findViewById(R.id.button6);
 
-        imageButtonx.setOnClickListener(new View.OnClickListener() {
+        bfeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -84,7 +84,7 @@ public class Payments extends AppCompatActivity  {
     }
 
     public void redirectFeedback(){
-        Intent intent = new Intent(this, Feedback.class);
+        Intent intent = new Intent(Payments.this, Feedback.class);
 
 
         startActivity(intent);

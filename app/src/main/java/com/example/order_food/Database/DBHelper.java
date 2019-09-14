@@ -38,18 +38,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
        db.execSQL("create table " + TABLE_NAME11 +"(oID INTEGER PRIMARY KEY AUTOINCREMENT,Name TEXT,Address TEXT,noItem INTEGER,Phone INTEGER,TOTAL INTEGER,PaymentM TEXT)");
         db.execSQL("create Table " + TABLE_NAME13 + "(ResID INTEGER PRIMARY KEY AUTOINCREMENT, ResName TEXT, ResBranch TEXT, ResAddress TEXT, TimeOpen DATETIME, TimeClose DATETIME)");
-       /* db.execSQL("create table dileepa (id INTEGER PRIMARY KEY AUTOINCREMENT)"); */
-        /*String SQL_CREATE_ENTRIES =
-                "CREATE TABLE" + UsersMaster.Users.TABLE_NAME_+"("+UsersMaster.Users.TABLE_NAME_+"("+
-                UsersMaster.Users.COL_EmpID+ "STRING PRIMAARY KEY,"+
-                UsersMaster.Users.COL_Fname+ "TEXT," +
-                UsersMaster.Users.COL_Lname+ "TEXT,"+
-                UsersMaster.Users.COL_Vehino+ "TEXT,"+
-                UsersMaster.Users.COL_LicenNO+ "TEXT,"+
-                UsersMaster.Users.COL_EmpUserName+ "TEXT,"+
-                UsersMaster.Users.COL_EmpPasswd+ "TEXT)";
 
-        db.execSQL(SQL_CREATE_ENTRIES);*/
 
 
     }

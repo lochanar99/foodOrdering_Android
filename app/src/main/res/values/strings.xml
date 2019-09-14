@@ -75,5 +75,6 @@
     <string name="resButtonAdd">Add Restaurant</string>
     <string name="showOrder">showOrder</string>
     <string name="btnAdmin">Admin</string>
+    <string name="FeedBack">FEEDBACK</string>
 
 </resources>
