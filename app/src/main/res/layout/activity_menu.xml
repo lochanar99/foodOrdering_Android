@@ -295,7 +295,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
             <EditText
-                android:id="@+id/editText22"
+                android:id="@+id/TimeClose"
                 android:layout_width="217dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="8dp"
@@ -309,7 +309,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/addRes"
                 android:layout_width="152dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"

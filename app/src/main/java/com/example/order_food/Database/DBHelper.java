@@ -19,7 +19,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String col_97 = "paymentM";
 
     public static final String TABLE_NAME13 = "Resturant_Manager";
-    public static final String col_1 = "ResID";
     public static final String col_2 = "ResName";
     public static final String col_3 = "ResBranch";
     public static final String col_4 = "ResAddress";
@@ -38,7 +37,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
        db.execSQL("create table " + TABLE_NAME11 +"(oID INTEGER PRIMARY KEY AUTOINCREMENT,Name TEXT,Address TEXT,noItem INTEGER,Phone INTEGER,TOTAL INTEGER,PaymentM TEXT)");
-        db.execSQL("create Table " + TABLE_NAME13 + "(ResID INTEGER PRIMARY KEY, ResName TEXT, ResBranch TEXT, ResAddress TEXT, TimeOpen DATETIME, TimeClose DATETIME)");
+        db.execSQL("create Table " + TABLE_NAME13 + "(ResID INTEGER PRIMARY KEY AUTOINCREMENT, ResName TEXT, ResBranch TEXT, ResAddress TEXT, TimeOpen DATETIME, TimeClose DATETIME)");
        /* db.execSQL("create table dileepa (id INTEGER PRIMARY KEY AUTOINCREMENT)"); */
         /*String SQL_CREATE_ENTRIES =
                 "CREATE TABLE" + UsersMaster.Users.TABLE_NAME_+"("+UsersMaster.Users.TABLE_NAME_+"("+
@@ -81,37 +80,29 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
         else
             return true;
-
-
-
-
-    }
-    public boolean addResturants(String name, String address,Integer noItem,Integer phone,Integer total, String paymentM){
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-
-        contentValues.put(col_92,name);
-        contentValues.put(col_93,address);
-        contentValues.put(col_94,noItem);
-        contentValues.put(col_95,phone);
-        contentValues.put(col_96,total);
-        contentValues.put(col_97,paymentM);
-
-        long result = db.insert(TABLE_NAME11,null,contentValues);
-        if(result == -1)
-            return false;
-        else
-            return true;
-
-
-
-
     }
 
     public Cursor getPaymentDetails(){
         SQLiteDatabase db = this.getWritableDatabase ();
         Cursor res = db.rawQuery("select * from "+TABLE_NAME11,null);
         return res;
+    }
+
+    public boolean addRes(String ResName, String ResBranch,String ResAddress,String TimeOpen,String TimeClose){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(col_2,ResName);
+        contentValues.put(col_3,ResBranch);
+        contentValues.put(col_4,ResAddress);
+        contentValues.put(col_5,TimeOpen);
+        contentValues.put(col_6,TimeClose);
+
+        long result = db.insert(TABLE_NAME13,null,contentValues);
+        if(result == -1)
+            return false;
+        else
+            return true;
     }
 }

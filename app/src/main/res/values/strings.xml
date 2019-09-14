@@ -73,5 +73,7 @@
     <string name="resTimeOpen">Open By</string>
     <string name="resTimeClose">Close By</string>
     <string name="resButtonAdd">Add Restaurant</string>
+    <string name="showOrder">showOrder</string>
+    <string name="btnAdmin">Admin</string>
 
 </resources>

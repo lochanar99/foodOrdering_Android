@@ -11,10 +11,23 @@ import android.widget.Toast;
 
 public class Feedback extends AppCompatActivity {
 
+    private Button badmin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
+
+
+        badmin =findViewById(R.id.badmin);
+
+        badmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Feedback.this,addResturant.class);
+                startActivity(intent);
+            }
+        });
         /*
         final EditText edit1 = (EditText)findViewById(R.id.editText);
         final EditText edit2 = (EditText)findViewById(R.id.editText2);
