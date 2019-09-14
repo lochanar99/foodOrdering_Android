@@ -11,7 +11,6 @@ import static android.os.Build.ID;
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "OnlineFood.db";
     public static final String TABLE_NAME11 = "payment_table";
-    public static final String col_91 = "oID";
     public static final String col_92 = "Name";
     public static final String col_93 = "Address";
     public static final String col_94 = "noItem";
@@ -83,7 +82,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getPaymentDetails(){
         SQLiteDatabase db = this.getWritableDatabase ();
-        Cursor res = db.rawQuery("select oID,noItem,TOTAL from "+TABLE_NAME11,null);
+        Cursor res = db.rawQuery("select * from "+TABLE_NAME11,null);
         return res;
     }
 }

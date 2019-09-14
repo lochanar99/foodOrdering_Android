@@ -1,9 +1,11 @@
 package com.example.order_food;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,11 +18,11 @@ import com.example.order_food.Database.DBHelper;
 
 public class Payments extends AppCompatActivity  {
 
-    private ImageButton imageButtonx;
-    private Button bbb;
+    ImageButton imageButtonx;
+
     DBHelper db;
     EditText eName,eAddress,eNoOfItem,ePhone,eTotal,ePaymentM;
-    Button bSubmit;
+    Button bSubmit,bSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,8 @@ public class Payments extends AppCompatActivity  {
 
         bSubmit = findViewById(R.id.button12);
 
+        bSummary = findViewById(R.id.button13);
+
         db = new DBHelper(this);
 
         imageButtonx =findViewById(R.id.bb1);
@@ -44,22 +48,16 @@ public class Payments extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
 
-
+                Toast.makeText(getApplicationContext(),"THANKYOU FOR ORDERING",Toast.LENGTH_LONG).show();
                 redirectFeedback();
             }
         });
 
-        bbb =findViewById(R.id.b3);
 
-        bbb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                redirectOrderStatus();
-            }
-        });
 
         addPayment();
+
+        viewAll();
     }
 
     public void addPayment(){
@@ -79,6 +77,8 @@ public class Payments extends AppCompatActivity  {
                     else
                         Toast.makeText(Payments.this,"Failed to Submit Order",Toast.LENGTH_LONG).show();
 
+                    validation();
+
             }
         });
     }
@@ -88,14 +88,59 @@ public class Payments extends AppCompatActivity  {
 
 
         startActivity(intent);
-        Toast.makeText(getApplicationContext(),"THANKYOU FOR ORDERING",Toast.LENGTH_LONG);
+
     }
 
-    public void redirectOrderStatus(){
+  /*  public void redirectOrderStatus(){
 
         Intent intent= new Intent(this,OrderStatus.class);
 
         startActivity(intent);
 
+    }*/
+
+    public void viewAll(){
+
+        bSummary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Cursor res =  db.getPaymentDetails();
+
+                if(res.getCount()==0){
+
+                    showMessage("Error","No data Found");
+
+                    return;
+                }
+
+                StringBuffer buffer = new StringBuffer();
+
+                while(res.moveToNext()){
+
+                    buffer.append("ORDER ID: "+res.getString(0)+"\n");
+                    buffer.append("NO. of Items: "+res.getInt(3)+"\n");
+                    buffer.append("TOTAL: "+res.getInt(5)+"\n\n");
+                }
+
+                showMessage("Data",buffer.toString());
+            }
+        });
+    }
+
+    public void showMessage(String title,String msg){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(msg);
+        builder.show();
+    }
+
+    public void validation(){
+
+        boolean isValid = true;
+        if(eName.getText().toString().isEmpty()){
+
+        }
     }
 }
