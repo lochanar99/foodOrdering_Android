@@ -2,8 +2,11 @@ package com.example.order_food.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import static android.os.Build.ID;
 
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "OnlineFood.db";
@@ -20,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
-        /*SQLiteDatabase db = this.getWritableDatabase();*/
+       /* SQLiteDatabase db = this.getWritableDatabase(); */
 
 
     }
@@ -28,7 +31,9 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("create table " + TABLE_NAME11 +"(oID INTEGER PRIMARY KEY AUTOINCREMENT,Name TEXT,Address TEXT,noItem INTEGER,Phone INTEGER,TOTAL INTEGER,PaymentM TEXT)");
+
+       db.execSQL("create table " + TABLE_NAME11 +"(oID INTEGER PRIMARY KEY AUTOINCREMENT,Name TEXT,Address TEXT,noItem INTEGER,Phone INTEGER,TOTAL INTEGER,PaymentM TEXT)");
+       /* db.execSQL("create table dileepa (id INTEGER PRIMARY KEY AUTOINCREMENT)"); */
         /*String SQL_CREATE_ENTRIES =
                 "CREATE TABLE" + UsersMaster.Users.TABLE_NAME_+"("+UsersMaster.Users.TABLE_NAME_+"("+
                 UsersMaster.Users.COL_EmpID+ "STRING PRIMAARY KEY,"+
@@ -48,6 +53,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVer, int newVer) {
 
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME11);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS dileepa");
         onCreate(sqLiteDatabase);
 
     }
@@ -73,5 +79,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
+    }
+
+    public Cursor getPaymentDetails(){
+        SQLiteDatabase db = this.getWritableDatabase ();
+        Cursor res = db.rawQuery("select oID,noItem,TOTAL from "+TABLE_NAME11,null);
+        return res;
     }
 }
