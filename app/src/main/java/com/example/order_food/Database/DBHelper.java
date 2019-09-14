@@ -1,5 +1,6 @@
 package com.example.order_food.Database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -19,7 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
-        SQLiteDatabase db = this.getWritableDatabase();
+        /*SQLiteDatabase db = this.getWritableDatabase();*/
 
 
     }
@@ -48,6 +49,29 @@ public class DBHelper extends SQLiteOpenHelper {
 
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME11);
         onCreate(sqLiteDatabase);
+
+    }
+
+    public boolean addPaymentDetails(String name, String address,Integer noItem,Integer phone,Integer total, String paymentM){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(col_92,name);
+        contentValues.put(col_93,address);
+        contentValues.put(col_94,noItem);
+        contentValues.put(col_95,phone);
+        contentValues.put(col_96,total);
+        contentValues.put(col_97,paymentM);
+
+        long result = db.insert(TABLE_NAME11,null,contentValues);
+        if(result == -1)
+            return false;
+        else
+            return true;
+
+
+
 
     }
 }

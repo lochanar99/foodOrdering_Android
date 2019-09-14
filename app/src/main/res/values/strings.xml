@@ -65,5 +65,6 @@
     <string name="paymentHint1">FULL NAME</string>
     <string name="paymentMobile">MOBILE</string>
     <string name="paymentCC">CASH/CARD</string>
+    <string name="submit1">SUBMIT</string>
 
 </resources>
