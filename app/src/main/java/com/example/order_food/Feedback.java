@@ -17,15 +17,6 @@ public class Feedback extends AppCompatActivity {
         setContentView(R.layout.activity_feedback);
 
 
-        badmin =findViewById(R.id.badmine);
-
-        badmin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Feedback.this,addResturant.class);
-                startActivity(intent);
-            }
-        });
         /*
         final EditText edit1 = (EditText)findViewById(R.id.editText);
         final EditText edit2 = (EditText)findViewById(R.id.editText2);
