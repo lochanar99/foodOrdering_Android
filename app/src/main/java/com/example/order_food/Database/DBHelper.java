@@ -11,6 +11,7 @@ import static android.os.Build.ID;
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "OnlineFood.db";
     public static final String TABLE_NAME11 = "payment_table";
+    public static final String col_91 = "oID";
     public static final String col_92 = "Name";
     public static final String col_93 = "Address";
     public static final String col_94 = "noItem";
@@ -93,5 +94,25 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
         else
             return true;
+    }
+
+    public boolean updatePayment(String oId,String name, String address,Integer noItem,Integer phone,Integer total, String paymentM){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(col_91,oId);
+        contentValues.put(col_92,name);
+        contentValues.put(col_93,address);
+        contentValues.put(col_94,noItem);
+        contentValues.put(col_95,phone);
+        contentValues.put(col_96,total);
+        contentValues.put(col_97,paymentM);
+
+        db.update(""+TABLE_NAME11,contentValues,"oID = ?",new String[]{oId});
+
+        return true;
+
     }
 }

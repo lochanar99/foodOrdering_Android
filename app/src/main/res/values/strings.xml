@@ -76,5 +76,9 @@
     <string name="showOrder">showOrder</string>
     <string name="btnAdmin">Admin</string>
     <string name="FeedBack">FEEDBACK</string>
+    <string name="pDel">DELETE</string>
+    <string name="aPaymenthead">MANAGE PAYMENTS</string>
+    <string name="pAdminGet">Manage Payments</string>
+    <string name="updatePayment">UPDATE</string>
 
 </resources>

@@ -15,7 +15,7 @@ public class addResturant extends AppCompatActivity {
 
     DBHelper db;
     EditText ResName,ResBranch,ResAddress,TimeOpen,TimeClose;
-    Button addRes;
+    Button addRes,managePayment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +29,22 @@ public class addResturant extends AppCompatActivity {
         TimeOpen = findViewById(R.id.TimeOpen);
         TimeClose = findViewById(R.id.TimeClose);
         addRes = (Button) findViewById(R.id.addRes);
+
+        managePayment = findViewById(R.id.button17);
         //View = (Button) findViewById(R.id.View);
         //delete = findViewById(R.id.delete);
         //ListView = findViewById(R.id.ListView);
         insertRes();
+
+
+        //LOCHANA(ADMIN PAYMENT PAGE NAVIGATION)
+        managePayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(addResturant.this,adminPayments.class);
+                startActivity(intent);
+            }
+        });
     }
     public void insertRes(){
 
