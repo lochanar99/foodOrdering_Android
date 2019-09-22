@@ -93,11 +93,11 @@ public class addResturant extends AppCompatActivity {
                 while(res.moveToNext()){
 
                     buffer.append("ORDER ID: "+res.getString(0)+"\n");
-                    buffer.append("Restaurant Name: "+res.getInt(1)+"\n");
-                    buffer.append("Restaurant Branch: "+res.getInt(2)+"\n");
-                    buffer.append("Restaurant Address: "+res.getInt(3)+"\n");
-                    buffer.append("Open Time: "+res.getInt(4)+"\n");
-                    buffer.append("Open Time: "+res.getInt(5)+"\n");
+                    buffer.append("Restaurant Name: "+res.getString(1)+"\n");
+                    buffer.append("Restaurant Branch: "+res.getString(2)+"\n");
+                    buffer.append("Restaurant Address: "+res.getString(3)+"\n");
+                    buffer.append("Open Time: "+res.getString(4)+"\n");
+                    buffer.append("Open Time: "+res.getString(5)+"\n");
                 }
 
                 showMessage("Restaurant Details",buffer.toString());
