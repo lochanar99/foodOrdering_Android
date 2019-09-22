@@ -20,6 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String col_97 = "paymentM";
 
     public static final String TABLE_NAME13 = "Resturant_Manager";
+    public static final String col_1 = "ResID";
     public static final String col_2 = "ResName";
     public static final String col_3 = "ResBranch";
     public static final String col_4 = "ResAddress";
