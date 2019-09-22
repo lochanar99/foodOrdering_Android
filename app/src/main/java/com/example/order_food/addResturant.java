@@ -63,5 +63,10 @@ public class addResturant extends AppCompatActivity {
         });
     }
 
+    public void displayRestaurants(View view){
+
+        startActivity(new Intent(this,displayRes.class));
+    }
+
 
 }

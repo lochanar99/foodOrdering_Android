@@ -6,7 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static android.os.Build.ID;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "OnlineFood.db";
@@ -20,6 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String col_97 = "paymentM";
 
     public static final String TABLE_NAME13 = "Resturant_Manager";
+    public static final String col_1 = "ResID";
     public static final String col_2 = "ResName";
     public static final String col_3 = "ResBranch";
     public static final String col_4 = "ResAddress";
@@ -38,7 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
        db.execSQL("create table " + TABLE_NAME11 +"(oID INTEGER PRIMARY KEY AUTOINCREMENT,Name TEXT,Address TEXT,noItem INTEGER,Phone INTEGER,TOTAL INTEGER,PaymentM TEXT)");
-        db.execSQL("create Table " + TABLE_NAME13 + "(ResID INTEGER PRIMARY KEY AUTOINCREMENT, ResName TEXT, ResBranch TEXT, ResAddress TEXT, TimeOpen DATETIME, TimeClose DATETIME)");
+        db.execSQL("create Table " + TABLE_NAME13 + "(ResID INTEGER PRIMARY KEY AUTOINCREMENT , ResName TEXT, ResBranch TEXT, ResAddress TEXT, TimeOpen DATETIME, TimeClose DATETIME)");
 
 
 
@@ -95,6 +97,8 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+
+
 
     public boolean updatePayment(String oId,String name, String address,Integer noItem,Integer phone,Integer total, String paymentM){
 
