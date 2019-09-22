@@ -94,14 +94,44 @@ public class adminPayments extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                boolean isUpdate = db.updatePayment(oid.getText().toString(),ename.getText().toString(),eaddress.getText().toString(),Integer.parseInt(eNoofItems.getText().toString()),Integer.parseInt(ePhone.getText().toString()),Integer.parseInt(eTotal.getText().toString()),ePaymentMethod.getText().toString());
+                String phoneNum = "[0-9]{10}";
+                String payCash = "CASH";
+                String payCard = "CARD";
+                String payCash1="cash";
+                String paycard1 = "card";
 
-                if(isUpdate == true)
-                    Toast.makeText(adminPayments.this,"Successfully Updated the PAYMENT",Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(adminPayments.this,"Unsuccessful in updating payment",Toast.LENGTH_LONG).show();
 
+                if(ename.getText().toString().isEmpty()== true){
+                    ename.setError("Please enter the customer NAME");
+                }
+                else if(eaddress.getText().toString().isEmpty()==true){
+                    eaddress.setError("Please enter the address");
+                }
+                else if(eNoofItems.getText().toString().isEmpty()==true){
+                    eNoofItems.setError("Enter the number of items ordered by customer!");
+                }
+                else if(ePhone.getText().toString().isEmpty()==true){
+                    ePhone.setError("Please enter your phone number");
+                }
+                else if(!ePhone.getText().toString().matches(phoneNum)){
+                    ePhone.setError("Please enter 10 digits to the phone number");
+                }
+                else if(eTotal.getText().toString().isEmpty()==true){
+                    eTotal.setError("Please enter the customers total manually");
+                }
+                else if(ePaymentMethod.getText().toString().isEmpty()==true){
+                    ePaymentMethod.setError("Please enter the payment method of the customer");
+                }
+                else {
 
+                    boolean isUpdate = db.updatePayment(oid.getText().toString(), ename.getText().toString(), eaddress.getText().toString(), Integer.parseInt(eNoofItems.getText().toString()), Integer.parseInt(ePhone.getText().toString()), Integer.parseInt(eTotal.getText().toString()), ePaymentMethod.getText().toString());
+
+                    if (isUpdate == true)
+                        Toast.makeText(adminPayments.this, "Successfully Updated the PAYMENT", Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(adminPayments.this, "Unsuccessful in updating payment", Toast.LENGTH_LONG).show();
+
+                }
             }
         });
     }

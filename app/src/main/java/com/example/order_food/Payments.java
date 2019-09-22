@@ -22,7 +22,8 @@ public class Payments extends AppCompatActivity  {
 
     DBHelper db;
     EditText eName,eAddress,eNoOfItem,ePhone,eTotal,ePaymentM;
-    Button bSubmit,bSummary;
+    Button bSubmit;
+   // Button bSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class Payments extends AppCompatActivity  {
 
         bSubmit = findViewById(R.id.button12);
 
-        bSummary = findViewById(R.id.button13);
+       // bSummary = findViewById(R.id.button13);
 
         db = new DBHelper(this);
 
@@ -57,7 +58,7 @@ public class Payments extends AppCompatActivity  {
 
         addPayment();
 
-        viewAll();
+       // viewAll();
     }
 
     public void addPayment(){
@@ -65,31 +66,74 @@ public class Payments extends AppCompatActivity  {
         bSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isInserted = db.addPaymentDetails(eName.getText().toString(),
-                                     eAddress.getText().toString(),
-                                    Integer.parseInt(eNoOfItem.getText().toString()),
-                                    Integer.parseInt(ePhone.getText().toString()),
-                                    Integer.parseInt(eTotal.getText().toString()),
-                                    ePaymentM.getText().toString() );
 
-                    if(isInserted = true)
-                        Toast.makeText(Payments.this,"Order Successfully Submitted",Toast.LENGTH_LONG).show();
-                    else
-                        Toast.makeText(Payments.this,"Failed to Submit Order",Toast.LENGTH_LONG).show();
+                    String phoneNum = "[0-9]{10}";
+                    String payCash = "CASH";
+                    String payCard = "CARD";
+                    String payCash1="cash";
+                    String paycard1 = "card";
 
-                    validation();
 
+                    if(eName.getText().toString().isEmpty()== true){
+                        eName.setError("Please enter the customer NAME");
+                    }
+                    else if(eAddress.getText().toString().isEmpty()==true){
+                        eAddress.setError("Please enter the address");
+                    }
+                    else if(eNoOfItem.getText().toString().isEmpty()==true){
+                        eNoOfItem.setError("Enter the number of items ordered by customer!");
+                    }
+                    else if(ePhone.getText().toString().isEmpty()==true){
+                        ePhone.setError("Please enter your phone number");
+                    }
+                    else if(!ePhone.getText().toString().matches(phoneNum)){
+                        ePhone.setError("Please enter 10 digits to the phone number");
+                    }
+                    else if(eTotal.getText().toString().isEmpty()==true){
+                        eTotal.setError("Please enter the customers total manually");
+                    }
+                    else if(ePaymentM.getText().toString().isEmpty()==true){
+                        ePaymentM.setError("Please enter the payment method of the customer");
+                    }
+                    /*else if(ePaymentM.getText().toString().matches(payCard)){
+                        ePaymentM.setError("Incorrect payment method");
+                    }
+                    else if(!ePaymentM.getText().toString().matches(payCash)){
+                        ePaymentM.setError("Incorrect payment method");
+                    }
+                    else if(!ePaymentM.getText().toString().matches(payCash1)){
+                        ePaymentM.setError("Incorrect payment method");
+                    }
+                    else if(!ePaymentM.getText().toString().matches(paycard1)){
+                        ePaymentM.setError("Incorrect payment method");
+                    }*/
+                    else {
+                        boolean isInserted = db.addPaymentDetails(eName.getText().toString(),
+                                eAddress.getText().toString(),
+                                Integer.parseInt(eNoOfItem.getText().toString()),
+                                Integer.parseInt(ePhone.getText().toString()),
+                                Integer.parseInt(eTotal.getText().toString()),
+                                ePaymentM.getText().toString());
+
+                        if (isInserted = true)
+                            Toast.makeText(Payments.this, "Order Successfully Submitted", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(Payments.this, "Failed to Submit Order", Toast.LENGTH_LONG).show();
+
+
+                    }
             }
         });
     }
 
-    public void redirectFeedback(){
+
+    public void redirectFeedback() {
         Intent intent = new Intent(Payments.this, Feedback.class);
 
 
         startActivity(intent);
 
-    }
+    }}
 
   /*  public void redirectOrderStatus(){
 
@@ -99,7 +143,7 @@ public class Payments extends AppCompatActivity  {
 
     }*/
 
-    public void viewAll(){
+   /* public void viewAll(){
 
         bSummary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +185,9 @@ public class Payments extends AppCompatActivity  {
         boolean isValid = true;
         if(eName.getText().toString().isEmpty()){
 
+
+
         }
     }
 }
+*/

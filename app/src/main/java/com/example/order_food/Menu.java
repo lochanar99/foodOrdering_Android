@@ -28,7 +28,7 @@ public class Menu extends AppCompatActivity {
         editText1 = findViewById(R.id.editText14);
         textView1 = findViewById(R.id.textView14);
         b1 = (Button) findViewById(R.id.button1);
-        button9 = findViewById(R.id.button3);
+        button9 =(Button) findViewById(R.id.button3);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,33 +37,29 @@ public class Menu extends AppCompatActivity {
                 Intent intent = new Intent(Menu.this, Payments.class);
                 startActivity(intent);
             }
-
-
         });
 
-        adddMenuDetails();
-
+        addMenuDetails();
     }
 
-        public void adddMenuDetails(){
+        public void addMenuDetails(){
 
-            button9.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    boolean isInserted = db1.addMenu(textView1.getText().toString(),
-                            Integer.parseInt(editText1.getText().toString()));
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean isInserted = db1.addMenu(textView1.getText().toString(),
+                        Integer.parseInt(editText1.getText().toString()));
 
-                    if (isInserted = true) {
-                        Toast.makeText(Menu.this, "Successfully added", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(Menu.this, "Not Added", Toast.LENGTH_SHORT).show();
-                    }
+                if(isInserted = true){
+                    Toast.makeText(Menu.this, "Successfully added", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(Menu.this, "Not Added", Toast.LENGTH_LONG).show();
                 }
-            });
+            }
+        });
 
-        }
     }
-
+    }
 
 
 
