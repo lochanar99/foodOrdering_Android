@@ -82,4 +82,11 @@
     <string name="updatePayment">UPDATE</string>
     <string name="viewRes">View Restaurant</string>
 
+    <string name="menunoodlesbtn">Noodles RS180 - RS250/=</string>
+    <string name="menutxt2">Enter Type</string>
+    <string name="menuhint">Enter food type</string>
+    <string name="menuricedata">Rice RS150-RS300/=</string>
+    <string name="menukoththudata2">Koththu RS180-RS250/=</string>
+    <string name="menushortdata">Shorteat</string>
+
 </resources>
