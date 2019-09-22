@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 public class Menu extends AppCompatActivity {
 
 
-    private Button b1;
+     Button b1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,19 +25,12 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                getPayment();
+                Intent intent = new Intent(Menu.this,Payments.class);
+                startActivity(intent);
             }
         });
 
     }
-
-    public void getPayment(){
-
-        Intent intent = new Intent(this,Payments.class);
-
-        startActivity(intent);
-    }
-
 
 
 
