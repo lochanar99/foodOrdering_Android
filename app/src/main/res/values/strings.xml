@@ -80,5 +80,6 @@
     <string name="aPaymenthead">MANAGE PAYMENTS</string>
     <string name="pAdminGet">Manage Payments</string>
     <string name="updatePayment">UPDATE</string>
+    <string name="viewRes">View Restaurant</string>
 
 </resources>

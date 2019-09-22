@@ -84,6 +84,11 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select * from "+TABLE_NAME11,null);
         return res;
     }
+    public Cursor getResDetails(){
+        SQLiteDatabase db = this.getWritableDatabase ();
+        Cursor res = db.rawQuery("select * from "+TABLE_NAME13,null);
+        return res;
+    }
 
     public boolean addRes(String ResName, String ResBranch,String ResAddress,String TimeOpen,String TimeClose){
 
