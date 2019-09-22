@@ -68,7 +68,7 @@ public class adminPayments extends AppCompatActivity {
                     buffer.append("NO. of Items: "+res.getInt(3)+"\n");
                     buffer.append("Customer Num:"+res.getInt(4)+"\n");
                     buffer.append("TOTAL: "+res.getInt(5)+"\n");
-                    buffer.append("Payment Method"+res.getString(6)+"\n");
+                    buffer.append("Payment Method"+res.getString(6)+"\n==============================\n");
                 }
 
                 showMessage("Saved Payments",buffer.toString());
@@ -93,9 +93,9 @@ public class adminPayments extends AppCompatActivity {
                 boolean isUpdate = db.updatePayment(oid.getText().toString(),ename.getText().toString(),eaddress.getText().toString(),Integer.parseInt(eNoofItems.getText().toString()),Integer.parseInt(ePhone.getText().toString()),Integer.parseInt(eTotal.getText().toString()),ePaymentMethod.getText().toString());
 
                 if(isUpdate == true)
-                    Toast.makeText(adminPayments.this,"DATA INSERTED",Toast.LENGTH_LONG).show();
+                    Toast.makeText(adminPayments.this,"Successfully Updated the PAYMENT",Toast.LENGTH_LONG).show();
                 else
-                    Toast.makeText(adminPayments.this,"DATA NOT INSERTED",Toast.LENGTH_LONG).show();
+                    Toast.makeText(adminPayments.this,"Unsuccessful in updating payment",Toast.LENGTH_LONG).show();
 
 
             }
