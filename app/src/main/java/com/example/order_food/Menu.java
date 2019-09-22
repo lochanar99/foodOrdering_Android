@@ -27,32 +27,41 @@ public class Menu extends AppCompatActivity {
 
         editText1 = findViewById(R.id.editText14);
         textView1 = findViewById(R.id.textView14);
-        b1 = (Button)findViewById(R.id.button1);
-        button9 = findViewById(R.id.button9);
+        b1 = (Button) findViewById(R.id.button1);
+        button9 = findViewById(R.id.button3);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Menu.this,Payments.class);
+                Intent intent = new Intent(Menu.this, Payments.class);
                 startActivity(intent);
             }
+
+
         });
 
-        button9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean isInserted = db1.addMenu(textView1.getText().toString(),
-                        Integer.parseInt(editText1.getText().toString()));
+        adddMenuDetails();
 
-                if(isInserted = true){
-                    Toast.makeText(Menu.this, "Successfully added", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(Menu.this, "Not Added", Toast.LENGTH_SHORT).show();
+    }
+
+        public void adddMenuDetails(){
+
+            button9.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    boolean isInserted = db1.addMenu(textView1.getText().toString(),
+                            Integer.parseInt(editText1.getText().toString()));
+
+                    if (isInserted = true) {
+                        Toast.makeText(Menu.this, "Successfully added", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(Menu.this, "Not Added", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        });
+            });
 
+        }
     }
 
 
@@ -61,6 +70,6 @@ public class Menu extends AppCompatActivity {
 
 
 
-    }
+
 
 
