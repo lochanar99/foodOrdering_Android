@@ -19,7 +19,7 @@ public class Menu extends AppCompatActivity {
 
     TextView textView1;
     EditText editText1, editText2, editText3, editText4, editText5, editText6, editText7, editText8;
-     Button b1, button9, button2, button3, button4;
+     Button b1, button9, button2, button3, button4, button5;
      DBHelper db1;
 
     @Override
@@ -41,6 +41,7 @@ public class Menu extends AppCompatActivity {
         button2 = findViewById(R.id.buttonhusbtn2);
         button3 = findViewById(R.id.buttonhusbtn3);
         button4 = findViewById(R.id.buttonhusbtn4);
+        button5 = findViewById(R.id.button2);
 
 
 
