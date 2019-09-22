@@ -115,4 +115,11 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
 
     }
+
+    public Integer deletePayment(String oId){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        return db.delete(TABLE_NAME11,"oID = ?",new String[] {oId});
+    }
 }

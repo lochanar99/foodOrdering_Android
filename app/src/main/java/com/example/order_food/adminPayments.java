@@ -15,7 +15,7 @@ import com.example.order_food.Database.DBHelper;
 public class adminPayments extends AppCompatActivity {
 
     DBHelper db;
-    Button bViewOrder,bUpdate;
+    Button bViewOrder,bUpdate,bDelete;
     EditText oid,ename,eaddress,eNoofItems,ePhone,eTotal,ePaymentMethod;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +35,15 @@ public class adminPayments extends AppCompatActivity {
         eTotal = findViewById(R.id.editText_6);
         ePaymentMethod = findViewById(R.id.editText_7);
 
+        bDelete = findViewById(R.id.button15);
+
 
 
         viewAll();
 
         updatePaymentDetails();
+
+        DeletePayment();
     }
 
 
@@ -63,12 +67,12 @@ public class adminPayments extends AppCompatActivity {
                 while(res.moveToNext()){
 
                     buffer.append("ORDER ID: "+res.getString(0)+"\n");
-                    buffer.append("Customer Name:"+res.getString(1)+"\n");
-                    buffer.append("Customer Address:"+res.getString(2)+"\n");
+                    buffer.append("Customer Name: "+res.getString(1)+"\n");
+                    buffer.append("Customer Address: "+res.getString(2)+"\n");
                     buffer.append("NO. of Items: "+res.getInt(3)+"\n");
-                    buffer.append("Customer Num:"+res.getInt(4)+"\n");
+                    buffer.append("Customer Num: "+res.getInt(4)+"\n");
                     buffer.append("TOTAL: "+res.getInt(5)+"\n");
-                    buffer.append("Payment Method"+res.getString(6)+"\n==============================\n");
+                    buffer.append("Payment Method: "+res.getString(6)+"\n==============================\n");
                 }
 
                 showMessage("Saved Payments",buffer.toString());
@@ -98,6 +102,22 @@ public class adminPayments extends AppCompatActivity {
                     Toast.makeText(adminPayments.this,"Unsuccessful in updating payment",Toast.LENGTH_LONG).show();
 
 
+            }
+        });
+    }
+
+    public void DeletePayment(){
+
+        bDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Integer deletedRows = db.deletePayment(oid.getText().toString());
+
+                if(deletedRows > 0)
+                    Toast.makeText(adminPayments.this,"PAYMENT DELETED",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(adminPayments.this,"PAYMENT NOT DELETED",Toast.LENGTH_LONG).show();
             }
         });
     }
