@@ -1,8 +1,10 @@
 package com.example.order_food;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +19,7 @@ public class Menu extends AppCompatActivity {
 
     TextView textView1;
     EditText editText1, editText2;
-     Button b1, button9;
+     Button b1, button9, button2;
      DBHelper db1;
 
     @Override
@@ -40,6 +42,7 @@ public class Menu extends AppCompatActivity {
         });
 
         addMenuDetails();
+        //viewmenuDetails();
     }
 
         public void addMenuDetails(){
@@ -59,6 +62,41 @@ public class Menu extends AppCompatActivity {
         });
 
     }
+
+   /* public void viewmenuDetails(){
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cursor men =  db1.getmenuDetails();
+
+                if(men.getCount() == 0){
+                    showmsg("Error", "no details found");
+                    return;
+                }
+
+                StringBuffer buffer = new StringBuffer();
+
+                while (men.moveToNext()){
+                    buffer.append("Menu ID: "+men.getString(0)+"\n");
+                    buffer.append("Menu Type: "+men.getString(1)+"\n");
+                    buffer.append("Quantity: "+men.getString(2)+"\n");
+
+                    showmsg("Menu Details", buffer.toString());
+
+                }
+            }
+        });
+    }
+
+    public void showmsg(String title,String msg){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(msg);
+        builder.show();
+    }
+*/
+
     }
 
 
