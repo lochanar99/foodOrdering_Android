@@ -66,7 +66,7 @@ public class Menu extends AppCompatActivity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isInserted = db1.addMenu(editText3.getText().toString(),
+                boolean isInserted = db1.addMenu(editText2.getText().toString(),
                         Integer.parseInt(editText1.getText().toString()));
 
                 if(isInserted = true){
@@ -83,7 +83,7 @@ public class Menu extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isInserted = db1.addMenu(editText2.getText().toString(),
+                boolean isInserted = db1.addMenu(editText3.getText().toString(),
                         Integer.parseInt(editText4.getText().toString()));
 
                 if(isInserted = true){
