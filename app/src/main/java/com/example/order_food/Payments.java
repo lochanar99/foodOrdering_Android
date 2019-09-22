@@ -22,7 +22,7 @@ public class Payments extends AppCompatActivity  {
 
     DBHelper db;
     EditText eName,eAddress,eNoOfItem,ePhone,eTotal,ePaymentM;
-    Button bSubmit,bSummary,bfeedback;
+    Button bSubmit,bSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +42,16 @@ public class Payments extends AppCompatActivity  {
 
         db = new DBHelper(this);
 
-        bfeedback =findViewById(R.id.button6);
+        //bfeedback =findViewById(R.id.button6);
 
-        bfeedback.setOnClickListener(new View.OnClickListener() {
+        /*bfeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Toast.makeText(getApplicationContext(),"THANKYOU FOR ORDERING",Toast.LENGTH_LONG).show();
                 redirectFeedback();
             }
-        });
+        });*/
 
 
 

@@ -26,12 +26,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String col_5 = "TimeOpen";
     public static final String col_6 = "TimeClose";
 
-    public static final String TABLE_NAME14 = "Menu_table";
-    public static final String col_11 = "ItemName";
-    public static final String col_12 = "Qty";
-
-
-
 
 
     public DBHelper(Context context) {
@@ -45,7 +39,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
        db.execSQL("create table " + TABLE_NAME11 +"(oID INTEGER PRIMARY KEY AUTOINCREMENT,Name TEXT,Address TEXT,noItem INTEGER,Phone INTEGER,TOTAL INTEGER,PaymentM TEXT)");
         db.execSQL("create Table " + TABLE_NAME13 + "(ResID INTEGER PRIMARY KEY AUTOINCREMENT, ResName TEXT, ResBranch TEXT, ResAddress TEXT, TimeOpen DATETIME, TimeClose DATETIME)");
-        db.execSQL("create table " + TABLE_NAME14 + "(mID INTEGER PRIMARY KEY AUTOINCREMENT, ItemName TEXT, Qty INTEGER)");
+
 
 
     }
@@ -55,7 +49,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME11);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME13);
-        sqLiteDatabase.execSQL("DROP Table IF EXISTS " +TABLE_NAME14);
         onCreate(sqLiteDatabase);
 
     }
@@ -123,26 +116,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean addMenu(String ItemName, Integer Qty){
+    public Integer deletePayment(String oId){
 
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
 
-        contentValues.put(col_11,ItemName);
-        contentValues.put(col_12,Qty);
-
-        long result = db.insert(TABLE_NAME14, null, contentValues);
-
-        if(result == -1)
-            return false;
-        else
-            return true;
+        return db.delete(TABLE_NAME11,"oID = ?",new String[] {oId});
     }
-
-    public Cursor getmenuDetails(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor men = db.rawQuery("select * from " +TABLE_NAME14, null);
-        return men;
-    }
-
 }
