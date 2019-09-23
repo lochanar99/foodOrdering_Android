@@ -22,6 +22,8 @@ public class adminPayments extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_payments);
 
+        //Casting the buttons and making an object from the database
+
         bViewOrder = findViewById(R.id.button16);
         bUpdate = findViewById(R.id.button18);
 
@@ -46,7 +48,7 @@ public class adminPayments extends AppCompatActivity {
         DeletePayment();
     }
 
-
+    //Function to retrieve data from the database into a popup screen
     public void viewAll(){
 
         bViewOrder.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +82,7 @@ public class adminPayments extends AppCompatActivity {
         });
     }
 
+    //The popup message alert dialog
     public void showMessage(String title,String msg){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
@@ -87,7 +90,7 @@ public class adminPayments extends AppCompatActivity {
         builder.setMessage(msg);
         builder.show();
     }
-
+    //Function to update the payment details
     public void updatePaymentDetails(){
 
         bUpdate.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +103,8 @@ public class adminPayments extends AppCompatActivity {
                 String payCash1="cash";
                 String paycard1 = "card";
 
+
+                //Validation for the onclick button event
 
                 if(ename.getText().toString().isEmpty()== true){
                     ename.setError("Please enter the customer NAME");
@@ -135,7 +140,7 @@ public class adminPayments extends AppCompatActivity {
             }
         });
     }
-
+    //Function to delete a payment
     public void DeletePayment(){
 
         bDelete.setOnClickListener(new View.OnClickListener() {

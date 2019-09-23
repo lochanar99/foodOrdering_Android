@@ -67,14 +67,30 @@ public class addResturant extends AppCompatActivity {
         addRes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isInserted = db.addRes(ResName.getText().toString(), ResBranch.getText().toString(), ResAddress.getText().toString(),
-                        TimeOpen.getText().toString(), TimeClose.getText().toString());
+                if(ResName.getText().toString().isEmpty()== true){
+                    ResName.setError("Please enter the restaurant NAME");
+                }
+                else if(ResBranch.getText().toString().isEmpty()==true){
+                    ResBranch.setError("Please enter the branch");
+                }
+                else if(ResAddress.getText().toString().isEmpty()==true){
+                    ResAddress.setError("Enter the restaurant address!");
+                }
+                else if(TimeOpen.getText().toString().isEmpty()==true){
+                    TimeOpen.setError("Please enter open time of the restaurant ");
+                }
+                else if(TimeClose.getText().toString().isEmpty()==true){
+                    TimeClose.setError("Please enter closing time of the restaurant");
+                }
+                else {
+                    boolean isInserted = db.addRes(ResName.getText().toString(), ResBranch.getText().toString(), ResAddress.getText().toString(),
+                            TimeOpen.getText().toString(), TimeClose.getText().toString());
 
-                if(isInserted = true)
-                    Toast.makeText(addResturant.this,"Successfully Submitted",Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(addResturant.this,"Failed to Submit Order",Toast.LENGTH_LONG).show();
-
+                    if (isInserted = true)
+                        Toast.makeText(addResturant.this, "Successfully Submitted", Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(addResturant.this, "Failed to Submit Order", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

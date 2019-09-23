@@ -14,7 +14,7 @@ public class spalash extends AppCompatActivity {
 
         //Removing Action Bar
 
-        getSupportActionBar().hide();
+      //  getSupportActionBar().hide();
 
         new Handler() .postDelayed(new Runnable() {
             @Override

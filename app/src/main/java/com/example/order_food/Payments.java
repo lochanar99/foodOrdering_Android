@@ -30,6 +30,8 @@ public class Payments extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payments);
 
+        //Casting the buttons.
+
         eName = findViewById(R.id.e1);
         eAddress = findViewById(R.id.e2);
         eNoOfItem = findViewById(R.id.e3);
@@ -40,6 +42,8 @@ public class Payments extends AppCompatActivity  {
         bSubmit = findViewById(R.id.button12);
 
        // bSummary = findViewById(R.id.button13);
+
+        //Making the db object
 
         db = new DBHelper(this);
 
@@ -62,6 +66,7 @@ public class Payments extends AppCompatActivity  {
        // viewAll();
     }
 
+    //Fuction to add payment
     public void addPayment(){
 
         bSubmit.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +78,8 @@ public class Payments extends AppCompatActivity  {
                     String payCard = "CARD";
                     String payCash1="cash";
                     String paycard1 = "card";
+
+                    //Validation when inserting data into the database
 
 
                     if(eName.getText().toString().isEmpty()== true){
@@ -127,6 +134,7 @@ public class Payments extends AppCompatActivity  {
         });
     }
 
+        //Fucntion to go to the feedback page interface
 
     public void redirectFeedback() {
         Intent intent = new Intent(Payments.this, Feedback.class);
