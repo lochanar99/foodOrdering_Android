@@ -16,8 +16,8 @@ import com.example.order_food.Database.DBHelper;
 public class addResturant extends AppCompatActivity {
 
     DBHelper db;
-    EditText ResName,ResBranch,ResAddress,TimeOpen,TimeClose;
-    Button addRes,managePayment,viewR;
+    EditText Rid,ResName,ResBranch,ResAddress,TimeOpen,TimeClose;
+    Button addRes,managePayment,viewR,Rupdate,Rdelete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +27,16 @@ public class addResturant extends AppCompatActivity {
 
         viewR = findViewById(R.id.viewR);
 
+        Rid = findViewById(R.id.editText350);
         ResName = findViewById(R.id.ResName);
         ResBranch = findViewById(R.id.ResBranch);
         ResAddress = findViewById(R.id.ResAddress);
         TimeOpen = findViewById(R.id.TimeOpen);
         TimeClose = findViewById(R.id.TimeClose);
         addRes = (Button) findViewById(R.id.addRes);
+        Rupdate = findViewById(R.id.Rupdate);
+        Rdelete = findViewById(R.id.Rdelete);
+
 
         managePayment = findViewById(R.id.button17);
         //View = (Button) findViewById(R.id.View);
@@ -44,6 +48,9 @@ public class addResturant extends AppCompatActivity {
         insertRes();
 
         viewAll();
+        updateResDetails();
+
+        DeleteRestaurant();
 
 
         //LOCHANA(ADMIN PAYMENT PAGE NAVIGATION)
@@ -113,66 +120,53 @@ public class addResturant extends AppCompatActivity {
         builder.show();
     }
 
-    public void updatePaymentDetails(){
+    public void updateResDetails(){
 
-        bUpdate.setOnClickListener(new View.OnClickListener() {
+        Rupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String phoneNum = "[0-9]{10}";
-                String payCash = "CASH";
-                String payCard = "CARD";
-                String payCash1="cash";
-                String paycard1 = "card";
-
-
-                if(ename.getText().toString().isEmpty()== true){
-                    ename.setError("Please enter the customer NAME");
+                if(ResName.getText().toString().isEmpty()== true){
+                    ResName.setError("Please enter the restaurant NAME");
                 }
-                else if(eaddress.getText().toString().isEmpty()==true){
-                    eaddress.setError("Please enter the address");
+                else if(ResBranch.getText().toString().isEmpty()==true){
+                    ResBranch.setError("Please enter the branch");
                 }
-                else if(eNoofItems.getText().toString().isEmpty()==true){
-                    eNoofItems.setError("Enter the number of items ordered by customer!");
+                else if(ResAddress.getText().toString().isEmpty()==true){
+                    ResAddress.setError("Enter the restaurant address!");
                 }
-                else if(ePhone.getText().toString().isEmpty()==true){
-                    ePhone.setError("Please enter your phone number");
+                else if(TimeOpen.getText().toString().isEmpty()==true){
+                    TimeOpen.setError("Please enter open time of the restaurant ");
                 }
-                else if(!ePhone.getText().toString().matches(phoneNum)){
-                    ePhone.setError("Please enter 10 digits to the phone number");
-                }
-                else if(eTotal.getText().toString().isEmpty()==true){
-                    eTotal.setError("Please enter the customers total manually");
-                }
-                else if(ePaymentMethod.getText().toString().isEmpty()==true){
-                    ePaymentMethod.setError("Please enter the payment method of the customer");
+                else if(TimeClose.getText().toString().isEmpty()==true){
+                    TimeClose.setError("Please enter closing time of the restaurant");
                 }
                 else {
 
-                    boolean isUpdate = db.updatePayment(oid.getText().toString(), ename.getText().toString(), eaddress.getText().toString(), Integer.parseInt(eNoofItems.getText().toString()), Integer.parseInt(ePhone.getText().toString()), Integer.parseInt(eTotal.getText().toString()), ePaymentMethod.getText().toString());
+                    boolean isUpdate = db.updateResDetails(Rid.getText().toString(), ResName.getText().toString(), ResBranch.getText().toString(),ResAddress.getText().toString(), TimeOpen.getText().toString(), TimeClose.getText().toString());
 
                     if (isUpdate == true)
-                        Toast.makeText(adminPayments.this, "Successfully Updated the PAYMENT", Toast.LENGTH_LONG).show();
+                        Toast.makeText(addResturant.this, "Successfully Updated the RESTAURANT DETAILS", Toast.LENGTH_LONG).show();
                     else
-                        Toast.makeText(adminPayments.this, "Unsuccessful in updating payment", Toast.LENGTH_LONG).show();
+                        Toast.makeText(addResturant.this, "Unsuccessful in updating RESTAURANT DETAILS", Toast.LENGTH_LONG).show();
 
                 }
             }
         });
     }
 
-    public void DeletePayment(){
+    public void DeleteRestaurant(){
 
-        bDelete.setOnClickListener(new View.OnClickListener() {
+        Rdelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Integer deletedRows = db.deletePayment(oid.getText().toString());
+                Integer deletedRows = db.deleteRestaurant(Rid.getText().toString());
 
                 if(deletedRows > 0)
-                    Toast.makeText(adminPayments.this,"PAYMENT DELETED",Toast.LENGTH_LONG).show();
+                    Toast.makeText(addResturant.this,"DETAILS DELETED",Toast.LENGTH_LONG).show();
                 else
-                    Toast.makeText(adminPayments.this,"PAYMENT NOT DELETED",Toast.LENGTH_LONG).show();
+                    Toast.makeText(addResturant.this,"DETAILS NOT DELETED",Toast.LENGTH_LONG).show();
             }
         });
     }

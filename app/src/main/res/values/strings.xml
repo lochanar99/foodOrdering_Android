@@ -90,5 +90,6 @@
     <string name="menushortdata">Shorteat</string>
     <string name="Rupdate">Update</string>
     <string name="Rdelete">Delete</string>
+    <string name="Rid">RID</string>
 
 </resources>

@@ -137,31 +137,29 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //Restaurant manager
-    public boolean updateRestaurant(String oId,String name, String address,Integer noItem,Integer phone,Integer total, String paymentM){
+    public boolean updateResDetails(String Rid,String ResName, String ResBranch,String ResAddress,String TimeOpen,String TimeClose){
 
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
+        contentValues.put(col_1,Rid);
+        contentValues.put(col_2,ResName);
+        contentValues.put(col_3,ResBranch);
+        contentValues.put(col_4,ResAddress);
+        contentValues.put(col_5,TimeOpen);
+        contentValues.put(col_6,TimeClose);
 
-        contentValues.put(col_91,oId);
-        contentValues.put(col_92,name);
-        contentValues.put(col_93,address);
-        contentValues.put(col_94,noItem);
-        contentValues.put(col_95,phone);
-        contentValues.put(col_96,total);
-        contentValues.put(col_97,paymentM);
-
-        db.update(""+TABLE_NAME11,contentValues,"oID = ?",new String[]{oId});
+        db.update(""+TABLE_NAME13,contentValues,"ResID = ?",new String[]{Rid});
 
         return true;
 
     }
 
-    public Integer deletePayment(String oId){
+    public Integer deleteRestaurant(String Rid){
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        return db.delete(TABLE_NAME11,"oID = ?",new String[] {oId});
+        return db.delete(TABLE_NAME13,"ResID = ?",new String[] {Rid});
     }
 
 
