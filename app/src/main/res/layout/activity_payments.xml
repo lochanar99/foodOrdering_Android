@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/tbackground1"
+        android:background="@drawable/paymentsbackground"
         tools:context=".Payments"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="-173dp">
