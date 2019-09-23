@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Menu">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -350,7 +350,7 @@
                 android:layout_height="44dp"
                 android:layout_marginTop="12dp"
                 android:background="@android:color/holo_orange_dark"
-                android:text="Button"
+                android:text="@string/confirmbutton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.102"
                 app:layout_constraintStart_toStartOf="parent"
@@ -374,6 +374,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_background2"
+            android:onClick="viewmenuDetails"
             android:text="@string/btn2menu" />
 
 

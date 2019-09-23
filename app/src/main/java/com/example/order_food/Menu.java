@@ -21,11 +21,14 @@ public class Menu extends AppCompatActivity {
     EditText editText1, editText2, editText3, editText4, editText5, editText6, editText7, editText8;
      Button b1, button9, button2, button3, button4, button5;
      DBHelper db1;
+     int no1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        db1 = new DBHelper(getApplicationContext());
 
         editText1 = findViewById(R.id.editTexthus2);
         editText2 = findViewById(R.id.editTexthus1);
@@ -42,6 +45,7 @@ public class Menu extends AppCompatActivity {
         button3 = findViewById(R.id.buttonhusbtn3);
         button4 = findViewById(R.id.buttonhusbtn4);
         button5 = findViewById(R.id.button2);
+
 
 
 
@@ -66,24 +70,37 @@ public class Menu extends AppCompatActivity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isInserted = db1.addMenu(editText3.getText().toString(),
-                        Integer.parseInt(editText1.getText().toString()));
 
-                if(isInserted = true){
-                    Toast.makeText(Menu.this, "Successfully added", Toast.LENGTH_LONG).show();
-                }else{
-                    Toast.makeText(Menu.this, "Not Added", Toast.LENGTH_LONG).show();
+                if (editText2.length() == 0) {
+                    editText2.setError("Field cannot be empty");
+                } else {
+                    no1 = Integer.parseInt(editText1.getText().toString());
+
+                    if (no1 > 20 || no1 < 1) {
+                        Toast.makeText(Menu.this, "Number between 1-20", Toast.LENGTH_SHORT).show();
+                    } else {
+
+                        boolean isInserted = db1.addMenu(editText2.getText().toString(),
+                                Integer.parseInt(editText1.getText().toString()));
+
+                        if (isInserted = true) {
+                            Toast.makeText(Menu.this, "Successfully added", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(Menu.this, "Not Added", Toast.LENGTH_LONG).show();
+                        }
+                    }
                 }
-            }
-        });
+            }}
+            );
 
-    }
+        }
+
 
     public void addMenuDetails1(){
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isInserted = db1.addMenu(editText2.getText().toString(),
+                boolean isInserted = db1.addMenu(editText3.getText().toString(),
                         Integer.parseInt(editText4.getText().toString()));
 
                 if(isInserted = true){
@@ -128,10 +145,9 @@ public class Menu extends AppCompatActivity {
     }
 
 
-   /* public void viewmenuDetails(){
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    public void viewmenuDetails(View view)
+    {
+
                 Cursor men =  db1.getmenuDetails();
 
                 if(men.getCount() == 0){
@@ -149,8 +165,7 @@ public class Menu extends AppCompatActivity {
                     showmsg("Menu Details", buffer.toString());
 
                 }
-            }
-        });
+
     }
 
     public void showmsg(String title,String msg){
@@ -160,7 +175,27 @@ public class Menu extends AppCompatActivity {
         builder.setMessage(msg);
         builder.show();
     }
-*/
+
+
+
+ /*   public void Deletemenus(){
+
+        bDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Integer deletedRows = db.deletemenu(oid.getText().toString());
+
+                if(deletedRows > 0)
+                    Toast.makeText(adminPayments.this,"Item DELETED",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(adminPayments.this,"Item NOT DELETED",Toast.LENGTH_LONG).show();
+            }
+        });
+    }*/
+
+
+
 
     }
 
