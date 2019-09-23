@@ -29,7 +29,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public static final String TABLE_NAME14 = "Menu_table";
-    //public static final String col_10 = "ID";
+    public static final String col_10 = "ID";
     public static final String col_11 = "ItemName";
     public static final String col_12 = "Qty";
 
@@ -153,19 +153,20 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
     }
 
-  /*  public Cursor getmenuDetails(){
+  public Cursor getmenuDetails()
+  {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor men = db.rawQuery("select * from " +TABLE_NAME14, null);
         return men;
-    }*/
+    }
 
 
   //menu delete method in dbhelper
 
-    public Integer deleteMenu(String ID){
+   /* public Integer deleteMenu(String ID){
         SQLiteDatabase db = this.getWritableDatabase();
 
         return db.delete(TABLE_NAME14, "ID = ?", new String[] {ID});
-    }
+    }*/
 
 }
