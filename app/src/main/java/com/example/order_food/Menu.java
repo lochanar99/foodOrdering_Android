@@ -76,7 +76,7 @@ public class Menu extends AppCompatActivity {
                 } else {
                     no1 = Integer.parseInt(editText1.getText().toString());
 
-                    if (no1 < 20 || no1 > 1) {
+                    if (no1 > 20 || no1 < 1) {
                         Toast.makeText(Menu.this, "Number between 1-20", Toast.LENGTH_SHORT).show();
                     } else {
 
@@ -106,7 +106,7 @@ public class Menu extends AppCompatActivity {
                 }else {
                     no2 = Integer.parseInt(editText4.getText().toString());
 
-                    if (no1 < 20 || no1 > 1) {
+                    if (no1 > 20 || no1 < 1) {
                         Toast.makeText(Menu.this, "Number between 1-20", Toast.LENGTH_SHORT).show();
                     } else {
                         boolean isInserted = db1.addMenu(editText3.getText().toString(),
