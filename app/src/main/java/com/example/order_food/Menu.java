@@ -30,6 +30,7 @@ public class Menu extends AppCompatActivity {
 
         db1 = new DBHelper(getApplicationContext());
 
+            //initialising components
         editText1 = findViewById(R.id.editTexthus2);
         editText2 = findViewById(R.id.editTexthus1);
         editText3 = findViewById(R.id.editTexthus3);
@@ -48,7 +49,7 @@ public class Menu extends AppCompatActivity {
 
 
 
-
+    //navigate to payments
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +65,7 @@ public class Menu extends AppCompatActivity {
         addMenuDetails3();
         //viewmenuDetails();
     }
-
+    //insert menu data to database
         public void addMenuDetails(){
 
         button9.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +96,7 @@ public class Menu extends AppCompatActivity {
 
         }
 
-
+    //insert menu data to database
     public void addMenuDetails1(){
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +123,7 @@ public class Menu extends AppCompatActivity {
         }});
     }
 
+    //insert menu data to database
     public void addMenuDetails2(){
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,6 +140,7 @@ public class Menu extends AppCompatActivity {
         });
     }
 
+    //insert menu data to database
     public void addMenuDetails3(){
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,7 +157,7 @@ public class Menu extends AppCompatActivity {
         });
     }
 
-
+    //retrieve database details to popup menu
     public void viewmenuDetails(View view)
     {
 
@@ -186,7 +189,7 @@ public class Menu extends AppCompatActivity {
         builder.show();
     }
 
-
+//delete method
 
  /*   public void Deletemenus(){
 
@@ -208,6 +211,8 @@ public class Menu extends AppCompatActivity {
 
 
     }
+
+    //end of menu java
 
 
 
