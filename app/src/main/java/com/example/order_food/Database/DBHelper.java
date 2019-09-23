@@ -29,7 +29,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public static final String TABLE_NAME14 = "Menu_table";
-    public static final String col_10 = "ID";
+    //public static final String col_10 = "ID";
     public static final String col_11 = "ItemName";
     public static final String col_12 = "Qty";
 

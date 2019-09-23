@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Feedback extends AppCompatActivity {
 
-    Button badmin;
+    //Button badmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
