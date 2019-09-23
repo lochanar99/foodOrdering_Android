@@ -42,7 +42,7 @@ public class Menu extends AppCompatActivity {
         button2 = findViewById(R.id.buttonhusbtn2);
         button3 = findViewById(R.id.buttonhusbtn3);
         button4 = findViewById(R.id.buttonhusbtn4);
-        button5 = findViewById(R.id.button2);
+       // button5 = findViewById(R.id.button2);
 
 
 
