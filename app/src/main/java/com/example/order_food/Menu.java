@@ -21,6 +21,7 @@ public class Menu extends AppCompatActivity {
     EditText editText1, editText2, editText3, editText4, editText5, editText6, editText7, editText8;
      Button b1, button9, button2, button3, button4, button5;
      DBHelper db1;
+     int no1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,18 +67,31 @@ public class Menu extends AppCompatActivity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isInserted = db1.addMenu(editText3.getText().toString(),
-                        Integer.parseInt(editText1.getText().toString()));
 
-                if(isInserted = true){
-                    Toast.makeText(Menu.this, "Successfully added", Toast.LENGTH_LONG).show();
-                }else{
-                    Toast.makeText(Menu.this, "Not Added", Toast.LENGTH_LONG).show();
+                if (editText2.length() == 0) {
+                    editText2.setError("Field cannot be empty");
+                } else {
+                    no1 = Integer.parseInt(editText1.getText().toString());
+
+                    if (no1 > 20 || no1 < 1) {
+                        Toast.makeText(Menu.this, "Number between 1-20", Toast.LENGTH_SHORT).show();
+                    } else {
+
+                        boolean isInserted = db1.addMenu(editText3.getText().toString(),
+                                Integer.parseInt(editText1.getText().toString()));
+
+                        if (isInserted = true) {
+                            Toast.makeText(Menu.this, "Successfully added", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(Menu.this, "Not Added", Toast.LENGTH_LONG).show();
+                        }
+                    }
                 }
-            }
-        });
+            }}
+            );
 
-    }
+        }
+
 
     public void addMenuDetails1(){
         button2.setOnClickListener(new View.OnClickListener() {

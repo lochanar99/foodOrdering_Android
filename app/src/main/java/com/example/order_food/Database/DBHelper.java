@@ -158,4 +158,14 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor men = db.rawQuery("select * from " +TABLE_NAME14, null);
         return men;
     }*/
+
+
+  //menu delete method in dbhelper
+
+    public Integer deleteMenu(String ID){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        return db.delete(TABLE_NAME14, "ID = ?", new String[] {ID});
+    }
+
 }
