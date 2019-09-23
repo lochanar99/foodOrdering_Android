@@ -136,6 +136,34 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.delete(TABLE_NAME11,"oID = ?",new String[] {oId});
     }
 
+    //Restaurant manager
+    public boolean updateRestaurant(String oId,String name, String address,Integer noItem,Integer phone,Integer total, String paymentM){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(col_91,oId);
+        contentValues.put(col_92,name);
+        contentValues.put(col_93,address);
+        contentValues.put(col_94,noItem);
+        contentValues.put(col_95,phone);
+        contentValues.put(col_96,total);
+        contentValues.put(col_97,paymentM);
+
+        db.update(""+TABLE_NAME11,contentValues,"oID = ?",new String[]{oId});
+
+        return true;
+
+    }
+
+    public Integer deletePayment(String oId){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        return db.delete(TABLE_NAME11,"oID = ?",new String[] {oId});
+    }
+
 
     public boolean addMenu(String ItemName, Integer Qty){
 

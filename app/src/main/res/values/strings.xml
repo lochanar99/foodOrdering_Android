@@ -88,5 +88,7 @@
     <string name="menuricedata">Rice RS150-RS300/=</string>
     <string name="menukoththudata2">Koththu RS180-RS250/=</string>
     <string name="menushortdata">Shorteat</string>
+    <string name="Rupdate">Update</string>
+    <string name="Rdelete">Delete</string>
 
 </resources>
