@@ -153,11 +153,12 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
     }
 
-  /*  public Cursor getmenuDetails(){
+  public Cursor getmenuDetails()
+  {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor men = db.rawQuery("select * from " +TABLE_NAME14, null);
         return men;
-    }*/
+    }
 
 
   //menu delete method in dbhelper

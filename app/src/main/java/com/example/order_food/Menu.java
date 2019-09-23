@@ -28,6 +28,8 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        db1 = new DBHelper(getApplicationContext());
+
         editText1 = findViewById(R.id.editTexthus2);
         editText2 = findViewById(R.id.editTexthus1);
         editText3 = findViewById(R.id.editTexthus3);
@@ -42,7 +44,8 @@ public class Menu extends AppCompatActivity {
         button2 = findViewById(R.id.buttonhusbtn2);
         button3 = findViewById(R.id.buttonhusbtn3);
         button4 = findViewById(R.id.buttonhusbtn4);
-       // button5 = findViewById(R.id.button2);
+        button5 = findViewById(R.id.button2);
+
 
 
 
@@ -142,10 +145,9 @@ public class Menu extends AppCompatActivity {
     }
 
 
-   /* public void viewmenuDetails(){
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    public void viewmenuDetails(View view)
+    {
+
                 Cursor men =  db1.getmenuDetails();
 
                 if(men.getCount() == 0){
@@ -163,8 +165,7 @@ public class Menu extends AppCompatActivity {
                     showmsg("Menu Details", buffer.toString());
 
                 }
-            }
-        });
+
     }
 
     public void showmsg(String title,String msg){
@@ -174,7 +175,27 @@ public class Menu extends AppCompatActivity {
         builder.setMessage(msg);
         builder.show();
     }
-*/
+
+
+
+ /*   public void Deletemenus(){
+
+        bDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Integer deletedRows = db.deletemenu(oid.getText().toString());
+
+                if(deletedRows > 0)
+                    Toast.makeText(adminPayments.this,"Item DELETED",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(adminPayments.this,"Item NOT DELETED",Toast.LENGTH_LONG).show();
+            }
+        });
+    }*/
+
+
+
 
     }
 
