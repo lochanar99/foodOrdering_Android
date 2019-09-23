@@ -62,6 +62,8 @@ public class addResturant extends AppCompatActivity {
             }
         });
     }
+
+    //Restaurant details insert..................
     public void insertRes(){
 
         addRes.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +129,7 @@ public class addResturant extends AppCompatActivity {
             }
         });
     }
-
+    //code for the pop-up message
     public void showMessage(String title,String msg){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
@@ -135,11 +137,13 @@ public class addResturant extends AppCompatActivity {
         builder.setMessage(msg);
         builder.show();
     }
-
+    //update restaurant details.............................
     public void updateResDetails(){
 
         Rupdate.setOnClickListener(new View.OnClickListener() {
             @Override
+
+            //validation for the Restaurant details.............
             public void onClick(View view) {
 
                 if(ResName.getText().toString().isEmpty()== true){
@@ -170,7 +174,7 @@ public class addResturant extends AppCompatActivity {
             }
         });
     }
-
+    //delete restaurant details.........................................
     public void DeleteRestaurant(){
 
         Rdelete.setOnClickListener(new View.OnClickListener() {

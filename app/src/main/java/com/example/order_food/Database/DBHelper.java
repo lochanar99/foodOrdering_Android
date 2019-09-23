@@ -138,7 +138,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.delete(TABLE_NAME11,"oID = ?",new String[] {oId});
     }
 
-    //Restaurant manager
+    //Restaurant manager..............(Update)
     public boolean updateResDetails(String Rid,String ResName, String ResBranch,String ResAddress,String TimeOpen,String TimeClose){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -156,7 +156,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
 
     }
-
+    //Restaurant manager.............(delete)
     public Integer deleteRestaurant(String Rid){
 
         SQLiteDatabase db = this.getWritableDatabase();
