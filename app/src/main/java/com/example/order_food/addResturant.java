@@ -184,9 +184,9 @@ public class addResturant extends AppCompatActivity {
                 Integer deletedRows = db.deleteRestaurant(Rid.getText().toString());
 
                 if(deletedRows > 0)
-                    Toast.makeText(addResturant.this,"DETAILS DELETED",Toast.LENGTH_LONG).show();
+                    Toast.makeText(addResturant.this,"RESTUARANT DETAILS DELETED",Toast.LENGTH_LONG).show();
                 else
-                    Toast.makeText(addResturant.this,"DETAILS NOT DELETED",Toast.LENGTH_LONG).show();
+                    Toast.makeText(addResturant.this,"RESTUARANT DETAILS NOT DELETED",Toast.LENGTH_LONG).show();
             }
         });
     }
